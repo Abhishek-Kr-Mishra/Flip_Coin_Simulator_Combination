@@ -25,6 +25,9 @@ fi
 
 echo "Head: ${combinationDictionary[0]} Tail: ${combinationDictionary[1]}"
 
+sortedDict=($(echo ${combinationDictionary[@]} | tr " " "\n" | sort -n))
+	echo "In Sorted Order : ${sortedDict[@]}"
+
 }
 
 function Doublet()
@@ -56,6 +59,10 @@ function Doublet()
         fi
 
         echo "HH: ${combinationDictionary[0]} TT: ${combinationDictionary[1]}  HT : ${combinationDictionary[2]}   TH : ${combinationDictionary[3]}"
+
+	sortedDict=($(echo ${combinationDictionary[@]} | tr " " "\n" | sort -n))
+        echo "In Sorted Order : ${sortedDict[@]}"
+
 
 }
 
@@ -103,6 +110,8 @@ num=$1
                 echo "HTH = $HTH %"
 
         fi
+	sortedDict=($(echo ${combinationDictionary[@]} | tr " " "\n" | sort -n))
+        echo "In Sorted Order : ${sortedDict[@]}"
 
 
 }
